@@ -1,0 +1,33 @@
+<!-- Войти -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signIn page</title>
+
+    <script>
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
+            document.documentElement.style.setProperty('color-scheme', 'dark') :
+            document.documentElement.style.setProperty('color-scheme', 'dark');
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">signIn</h1>
+        <form class="form" action="/serverSignIn" method="POST">
+            <div class="form__wrapper">
+                <div class="form__item">
+                    <label class="form__label" for="login">Login:</label>
+                    <input class="form__input" name="login" type="text" placeholder="login">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="password">password:</label>
+                    <input class="form__input" name="password" type="password" placeholder="password">
+                </div>
+            </div>
+            <button class="form__btn" type="submit">Sign In</button>
+        </form>
+    </header>
+</body>
+</html>
