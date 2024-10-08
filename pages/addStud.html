@@ -1,0 +1,77 @@
+<!-- Регистрация -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp page</title>
+
+    <script>
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
+            document.documentElement.style.setProperty('color-scheme', 'dark') :
+            document.documentElement.style.setProperty('color-scheme', 'dark');
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Add Student</h1>
+        <form class="form" action="/serverAddStud" method="POST">
+            <div class="form__wrapper">
+                <div class="form__item">
+                    <label class="form__label" for="name">First Name:</label>
+                    <input class="form__input" name="fname" type="text" placeholder="fname">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="lname">Last Name:</label>
+                    <input class="form__input" name="lname" type="text" placeholder="lname">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="term">Term:</label>
+                    <input class="form__input" name="term" type="number" placeholder="term">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="GrName">Group Name:</label>
+                    <input class="form__input" name="GrName" type="text" placeholder="GrName">
+                </div>
+            </div>
+            <button class="form__btn" type="submit">Add</button>
+        </form>
+        <h1 class="header__title">Del Student</h1>
+        <form class="form" action="/serverDelStud" method="POST">
+            <div class="form__wrapper">
+                <div class="form__item">
+                    <label class="form__label" for="name">Name:</label>
+                    <input class="form__input" name="fname" type="text" placeholder="fname">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="GrName">Last Name:</label>
+                    <input class="form__input" name="lname" type="text" placeholder="lname">
+                </div>
+            </div>
+            <button class="form__btn" type="submit">Del</button>
+        </form>
+        <h1 class="header__title">Change Student</h1>
+        <form class="form" action="/serverChangeStud" method="POST">
+            <div class="form__wrapper">
+                <div class="form__item">
+                    <label class="form__label" for="name">First Name:</label>
+                    <input class="form__input" name="fname" type="text" placeholder="fname">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="name">First Name:</label>
+                    <input class="form__input" name="lname" type="text" placeholder="lname">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="ChName">Changed First Name:</label>
+                    <input class="form__input" name="chFName" type="text" placeholder="chFName">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="ChName">Changed Last Name:</label>
+                    <input class="form__input" name="chLName" type="text" placeholder="chLName">
+                </div>
+            </div>
+            <button class="form__btn" type="submit">Change</button>
+        </form>
+    </header>
+</body>
+</html>

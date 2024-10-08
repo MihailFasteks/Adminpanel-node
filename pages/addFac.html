@@ -1,0 +1,55 @@
+<!-- Войти -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signIn page</title>
+
+    <script>
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
+            document.documentElement.style.setProperty('color-scheme', 'dark') :
+            document.documentElement.style.setProperty('color-scheme', 'dark');
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Add Faculty</h1>
+        <form class="form" action="/serverAddFaculty" method="POST">
+            <div class="form__wrapper">
+                <div class="form__item">
+                    <label class="form__label" for="name">Name:</label>
+                    <input class="form__input" name="name" type="text" placeholder="name">
+                </div>
+               
+            </div>
+            <button class="form__btn" type="submit">Add</button>
+        </form>
+        <h1 class="header__title">Del Faculty</h1>
+        <form class="form" action="/serverDelFaculty" method="POST">
+            <div class="form__wrapper">
+                <div class="form__item">
+                    <label class="form__label" for="name">Name:</label>
+                    <input class="form__input" name="name" type="text" placeholder="name">
+                </div>
+               
+            </div>
+            <button class="form__btn" type="submit">Del</button>
+        </form>
+        <h1 class="header__title">Change Faculty</h1>
+        <form class="form" action="/serverChangeFaculty" method="POST">
+            <div class="form__wrapper">
+                <div class="form__item">
+                    <label class="form__label" for="name">Name:</label>
+                    <input class="form__input" name="name" type="text" placeholder="name">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="ChName">Changed Name:</label>
+                    <input class="form__input" name="ChName" type="text" placeholder="ChName">
+                </div>
+            </div>
+            <button class="form__btn" type="submit">Change</button>
+        </form>
+    </header>
+</body>
+</html>
